@@ -1,0 +1,19 @@
+.wrap {
+    border-radius: clamp(5px, 5vw, 30px);
+    border: 1px solid #ccc;
+    background-color: #999;
+    padding: 2rem clamp(20px, 5vw, 60px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tasks__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+    width: 100%;
+}

@@ -1,0 +1,6 @@
+body {
+    font-size: clamp(14px, 1.25vw, 16px);
+    background-color: #696969;
+    color: #ffffff;
+    font-family: sans-serif;
+}

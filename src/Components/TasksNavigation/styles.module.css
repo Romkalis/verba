@@ -1,0 +1,26 @@
+.tasksNav__list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    border-bottom: 1px solid #fff;
+
+}
+
+.tasksNav__item {
+}
+
+.tasksNav__link {
+    padding: 5px 2em;
+    transition: all .3s linear;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+}
+
+.tasksNav__link:hover {
+    color: #a6b9ff;
+}

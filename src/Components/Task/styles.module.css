@@ -1,0 +1,50 @@
+.task {
+    box-sizing: border-box;
+    list-style: none;
+    border-radius: clamp(5px, 1vw, 10px);
+    border: 1px solid #ccc;
+    padding:.5rem 1rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto max-content;
+    justify-items: start;
+}
+
+.task__text {
+    justify-self: start;
+    margin-right: .5rem;
+}
+.task__deleted {
+    color: #ffa6a6;
+    text-decoration: line-through;
+
+}
+.task__ready {
+    color: #e4ffe4;
+}
+.task__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+
+}
+.task__ready,
+.task__delete {
+    border: none;
+    background-color: transparent;
+}
+
+.task__icon {
+    fill: #fff;
+    transition: all .3s ease;
+
+}
+.task__ready:hover .task__icon {
+    fill: darkseagreen;
+}
+.task__delete:hover .task__icon {
+    fill: #ffa6a6;
+}
