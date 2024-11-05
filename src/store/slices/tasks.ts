@@ -48,7 +48,9 @@ export const tasksSlice = createSlice({
     },
     changeTask: (state, action:PayloadAction<{status: TaskStatus, id: string}>) => {
       const task = state.find(task => task.id === action.payload.id)
-      task.status = action.payload.status
+        if(task) {
+          task.status = action.payload.status
+        }
     }
   },
 })

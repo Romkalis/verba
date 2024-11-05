@@ -34,7 +34,6 @@ export const Task = ({task}) => {
               <svg className={s.task__icon} version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none" width={'24'}>
                 <polygon className="st0" points="434.8,49 174.2,309.7 76.8,212.3 0,289.2 174.1,463.3 196.6,440.9 196.6,440.9 511.7,125.8 434.8,49"/>
               </svg>
-
             </button>
             <button onClick={handlerTaskDeleted} className={s.task__delete}>
               <svg className={s.task__icon} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" width={'24'}>

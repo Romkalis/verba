@@ -9,16 +9,7 @@
     align-items: center;
     gap: 1rem;
 }
-.button {
-    padding: 1em;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    min-width: 300px;
-    max-width: 320px;
-    transition: all .3s ease;
-}
+
 
 .newTask__add {
     background-color: #a6b9ff;
@@ -43,7 +34,4 @@
 }
 .newTask__input {
     width: 100%;
-    box-sizing: border-box;
-    padding: 1em;
-    border: none;
 }

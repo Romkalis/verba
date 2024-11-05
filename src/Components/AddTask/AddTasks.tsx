@@ -1,46 +1,57 @@
-import s from './styles.module.css'
-import React, { ReactEventHandler, useState } from 'react'
-import {useAppDispatch, useAppSelector} from "../../store/hooks/hooks.ts";
-import {addTask, removeTasks, TaskStatus} from "../../store/slices/tasks.ts";
-import uniqid from 'uniqid'
+import s from "./styles.module.css";
+import React, { useState } from "react";
+import { useAppDispatch } from "../../store/hooks/hooks.ts";
+import { addTask, removeTasks, TaskStatus } from "../../store/slices/tasks.ts";
+import uniqid from "uniqid";
+import { Button } from "../Button/Button.tsx";
+import { InputField } from "../Input/Input.tsx";
 
 export const AddTasks = () => {
-
-  const [task, setTask] = useState<string>('')
-  const dispatch = useAppDispatch()
-
-
+  const [task, setTask] = useState<string>("");
+  const dispatch = useAppDispatch();
 
   const handlerTaskInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTask(event.target.value)
-  }
+    setTask(event.target.value);
+  };
   const handlerAddTask = () => {
-    dispatch(addTask({
+    dispatch(
+      addTask({
         text: task,
         id: uniqid(),
-        status: TaskStatus.Progress
-      },))
-    setTask('')
-  }
+        status: TaskStatus.Progress,
+      })
+    );
+    setTask("");
+  };
 
   const handleDeleteTasks = () => {
-    dispatch(removeTasks())
-  }
+    dispatch(removeTasks());
+  };
 
   return (
     <>
       <div className={s.wrap}>
-        <button onClick={handlerAddTask} className={`${s.newTask__add} ${s.button}`}>
+        <Button onClick={handlerAddTask} addedClass={s.newTask__add}>
           Добавить задачу
-        </button>
+        </Button>
         <label htmlFor="newTask" className={s.newTask__label}>
-          <input onChange={handlerTaskInput} type="text" className={s.newTask__input} placeholder={'Новая задача...'} value={task}/>
+          <InputField
+            name={"task"}
+            onChange={handlerTaskInput}
+            type="text"
+            addedClass={s.newTask__input}
+            placeholder={"Новая задача..."}
+            value={task}
+          />
         </label>
 
-        <button onClick={handleDeleteTasks} className={`${s.newTask__remove} ${s.button}`}>
+        <Button
+          onClick={handleDeleteTasks}
+          addedClass={`${s.newTask__remove} ${s.button}`}
+        >
           Удалить задачи
-        </button>
+        </Button>
       </div>
     </>
-  )
-}
+  );
+};

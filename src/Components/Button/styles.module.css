@@ -1,0 +1,11 @@
+.button {
+        padding: 1em;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        min-width: 200px;
+        max-width: 320px;
+        transition: all .3s ease;
+        border-radius: 3px;
+}

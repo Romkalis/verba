@@ -1,5 +1,6 @@
 import {TasksNavigation} from "../TasksNavigation/TasksNavigation.tsx";
 import {Task} from '../Task/Task.tsx'
+import { Task  as TaskType }  from "../../store/slices/tasks.ts";
 import {useAppSelector} from "../../store/hooks/hooks.ts";
 import s from './styles.module.css'
 import {TaskStatus} from "../../store/slices/tasks.ts";
@@ -12,9 +13,9 @@ export const TasksList = () => {
 
   const [sort, setSort] = useState<TaskStatus | null>(TaskStatus.Progress)
 
-  let filteredTasks = sort === null
+  const filteredTasks: Array<TaskType>  = sort === null
     ? tasks
-    : tasks.filter(task => task.status === sort)
+    : tasks.filter((task: TaskType) => task.status === sort)
 
 
   return (

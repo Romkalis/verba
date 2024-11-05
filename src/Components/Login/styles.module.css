@@ -1,0 +1,29 @@
+.login__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 3vw;
+}
+
+.login__input {
+    width: 100%;
+    max-width: clamp(280px, 50vw, 760px);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    width: 100%;
+    max-width: clamp(280px, 50vw, 760px);
+    place-self: center;
+}
+
+.login__enter {
+    background-color: #437988;
+}
+.login__reset {
+    background-color: #88435b;
+}
