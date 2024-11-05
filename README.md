@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+### Тестовое задание для Verba-Group
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
+Приложение для управления списком задач. Позволяет добавлять задачи, менять их статус, удалять и восстанавливать из корзины.
 
-Currently, two official plugins are available:
+## Стек технологий
+- **Frontend**: React, Vite, TypeScript, Redux-Toolkit
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Дополнительные библиотеки
+- **uniqid** — используется для присвоения каждой задаче уникального идентификатора
 
-## Expanding the ESLint configuration
+## Реализация состояния
+Состояние приложения реализовано с помощью `Redux-Toolkit`, используя слайсы.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Функционал
+- **Добавление задачи** — создаёт новую задачу с уникальным ID
+- **Смена статуса задачи** — поддерживаются статусы: "готово" и "удалено"
+- **Удаление всех задач** — задачи перемещаются в корзину
+- **Восстановление из корзины** — задачи можно вернуть, если они были удалены по ошибке
 
-- Configure the top-level `parserOptions` property like this:
+## Стилизация
+Стили написаны на **модульном нативном CSS**.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+---
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Установка и запуск
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/Romkalis/verba.git
+2. Установите зависимости:
+   ```bash
+   cd verba-todo
+   npm install
+3. Запуск приложения:
+   ```bash
+   cd verba-todo
+   npm install
